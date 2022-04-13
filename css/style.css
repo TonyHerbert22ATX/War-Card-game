@@ -1,0 +1,50 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+#player1, #player2{
+  width: 40%;
+  /* border: 1px solid green; */
+}
+
+div{
+  /* border: 1px solid blue; */
+  width: 50%;
+  float: left;
+}
+
+section{
+  /* border: 1px solid red; */
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+body{
+  background: rgb(48, 89, 70);
+}
+
+body section img{
+  width: 100vw;
+}
