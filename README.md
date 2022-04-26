@@ -1,6 +1,6 @@
 <h1 align="center">War Card Game| <a href="https://tonyherbert22atx.github.io/A-Simple-Calculator/">Visit here!</a></h1>
 <div align="center">
-	 <a href="/gif/-Laq-n4" title=""><img src="https://i.makeagif.com/media/4-26-2022/Laq-n4.gif" alt=""></a><div style="font-size:11px;">make <a href="/" title="make a gif">gaming GIFs</a> like this at MakeaGif</div>
+<a href="/gif/-9EOsit" title=""><img src="https://i.makeagif.com/media/4-26-2022/9EOsit.gif" alt=""></a>
 
 
 </div>
