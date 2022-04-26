@@ -1,16 +1,16 @@
-<h1 align="center">Simple Calculator | <a href="https://tonyherbert22atx.github.io/A-Simple-Calculator/">Visit here!</a></h1>
+<h1 align="center">War Card Game| <a href="https://tonyherbert22atx.github.io/A-Simple-Calculator/">Visit here!</a></h1>
 <div align="center">
 	 <a href="/gif/-_SqivG" title=""><img src="https://i.makeagif.com/media/4-26-2022/_SqivG.gif" alt=""></a><div style="font-size:11px;">
 
 
 </div>
 
-<h3 align="center">Simple calculator website as my first attempt to work with OOP.</h3>
+<h3 align="center">A War card game. This is my first attempt with working with an API</h3>
 <br>
 
 ## How It's Made:
 
-This was my first attempt at a simple calculator, I still was not able to implement OOP completely but I was able to make it functional. 
+This was my first attempt at a war card game, I still was not able to implement OOP completely but I was able to make it functional. Usings a lot of if else statements to change the button scnerios. 
 
 <h2 align="center">Techs used:</h2>
 <br>
@@ -25,10 +25,7 @@ This was my first attempt at a simple calculator, I still was not able to implem
 
 ## Optimizations
 
-I'm planning to add a conditional to the code that prevents the user from entering a second ```.``` to the input if a number in the operation is already a decimal. 
-1. second round of war. (Back to back war match)
-2. less than 5 cards end game scenarios 
-
+I'm planning to add js code to do a second round of war. (Back to back war match). Also need the end game solved for war with less than 5 cards
 This is my work in progress War Game.
 
 
