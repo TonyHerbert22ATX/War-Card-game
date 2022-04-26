@@ -3,36 +3,72 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-img{
+img {
   display: block;
   margin: 0 auto;
 }
 
 
+.title{
+  margin: 0 auto;
+  text-align: center;
+}
+.title span{
+  font-size: 2rem;
+  color: #8c2727;
+}
+h1{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0;
+  margin-top: 2%;
+}
+h3{
+  margin: 0;
+}
+#result,.result{
+  text-align: center;
+  margin: 2% auto;
+}
+.result{
+  text-align: center;
+}
+.contain{
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.contain{
+  display: flex;
+  justify-content: space-between;
+}
 
-
-#player1, #player2{
-  width: 40%;
+#player1,
+#player2 {
+  width: 30%;
+  margin-top: 2%;
   /* border: 1px solid green; */
 }
 
-div{
+div {
   /* border: 1px solid blue; */
-  width: 50%;
+  width: 45%;
   float: left;
 }
 
-section{
+section {
   /* border: 1px solid red; */
   clear: both;
 }
@@ -41,10 +77,70 @@ section{
   display: none;
 }
 
-body{
+body {
   background: rgb(48, 89, 70);
 }
 
-body section img{
+body section img {
   width: 100vw;
+}
+
+button {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 10em;
+  background: #8c2727;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+button:hover {
+  animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+#w1, #w2{
+  width: 50%;
+}
+
+#BIG{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2rem;
 }

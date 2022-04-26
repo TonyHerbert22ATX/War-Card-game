@@ -12,46 +12,45 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>War Card Game</h1>
-	<h3>Refresh for New Game</h3>
+    <section class="title">
+      <h1>War Card Game</h1>
+      <h3><span>*</span>Refresh for New Game<span>*</span></h3>
+    </section>
+
     <button id="new">Deal All (Start)</button>
     <button id="draw" class="hidden">Draw next Card</button>
     <button id="drawWar" class="hidden">Draw for War!!!</button>
     <button id="warAgain" class="hidden">Draw for War AGAIN!!!</button>
+    <h3 class="result">Result:</h3>
+    <h3 id="result"></h3>
 
-    <h3 id="result">Result</h3>
-	<h1 id="BIG" class="hidden">Time For War!!!</h1>
-
-    <section>
-		<img src="img/winner-1.png" alt="" class="hidden" id="w1">
-		<img src="img/winner-2.png" alt="" class="hidden" id="w2">
-      <div id="1">
+    <section class="contain">
+      <img src="img/winner-1.png" alt="" class="hidden" id="w1" />
+      <img src="img/winner-2.png" alt="" class="hidden" id="w2" />
+      <div id="1" class="play1">
         <h2>Player 1</h2>
-        <span>Cards left:</span>  <span id="count1">0</span>
-		<div class="hidden">
-		<h5>Card 1: </h5>
-		<span class="card1"></span>
-		</div>
-		<div class="hidden">
-		<h5>Card 2: </h5>
-		<span class="card1"></span>
-		</div>
-		<div class="hidden">
-		<h5>Card 3: </h5>
-		<span class="card1"></span>
-		</div>
+        <span>Cards left:</span> <span id="count1">0</span>
+        <div class="hidden">
+          <h5>Card 1:</h5>
+          <span class="card1"></span>
+        </div>
+        <div class="hidden">
+          <h5>Card 2:</h5>
+          <span class="card1"></span>
+        </div>
+        <div class="hidden">
+          <h5>Card 3:</h5>
+          <span class="card1"></span>
+        </div>
         <img id="player1" src="img/card back black.png" alt="Playing Card" />
       </div>
-
-      <div id="2">
+      <h1 id="BIG">Time For War</h1>
+      <div id="2" class="play2">
         <h2>Player 2</h2>
-        <span>Cards left:</span>  <span id="count2">0</span>
+        <span>Cards left:</span> <span id="count2">0</span>
         <img id="player2" src="img/card back black.png" alt="Playing Card" />
       </div>
     </section>
-
-
-
 
     <script type="text/javascript" src="js/main.js"></script>
   </body>

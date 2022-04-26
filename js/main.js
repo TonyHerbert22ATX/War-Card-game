@@ -57,8 +57,14 @@ document.querySelector("#draw").addEventListener("click", drawACardEach);
 function drawACardEach() {
   if (p1Hand.length === 0) {
     document.querySelector("#w2").classList.toggle("hidden");
+    document.querySelector(".play1").classList.toggle("hidden");
+    document.querySelector(".play2").classList.toggle("hidden");
+    document.querySelector("#draw").style.display = "none";
   } else if (p2Hand.length === 0) {
     document.querySelector("#w1").classList.toggle("hidden");
+    document.querySelector(".play1").classList.toggle("hidden");
+    document.querySelector(".play2").classList.toggle("hidden");
+    document.querySelector("#draw").style.display = "none";
   } else {
     // ABOVE IS TO FIND A WINNER
     // ? Work in progress
@@ -94,7 +100,7 @@ function drawACardEach() {
     } else {
       console.log(p1Hand);
       console.log(p2Hand);
-      document.querySelector("#result").innerText = "";
+      document.querySelector("#result").innerText = "!!!";
       document.querySelector("#draw").classList.toggle("hidden");
       document.querySelector("#drawWar").classList.toggle("hidden");
       document.querySelector("#BIG").classList.toggle("hidden");
@@ -115,6 +121,17 @@ function drawForWar() {
   // TODO work in progress
 
   if (p1Hand.length === 4 || p2Hand.length === 4) {
+    document.querySelector("#player1").src = p2Hand[3].image;
+    document.querySelector("#player2").src = p2Hand[3].image;
+    let p1WarVal = convertToNum(p1Hand[3].value);
+    let p2WarVal = convertToNum(p2Hand[3].value);
+    if (p1WarVal > p2WarVal) {
+      document.querySelector("#result").innerText = "Player 1 Wins";
+      document.querySelector("#w1").classList.toggle("hidden");
+    } else if (p1WarVal < p2WarVal) {
+      document.querySelector("#result").innerText = "Player 2 Wins";
+      document.querySelector("#w2").classList.toggle("hidden");
+    }
   } else if (p1Hand.length === 3 || p2Hand.length === 3) {
     document.querySelector("#player1").src = p2Hand[2].image;
     document.querySelector("#player2").src = p2Hand[2].image;
@@ -210,6 +227,50 @@ document.querySelector("#warAgain").addEventListener("click", back2back);
 function back2back() {
   console.log(p1Hand);
   console.log(p2Hand);
+  document.querySelector("#player1").src = p1Hand[4].image;
+  document.querySelector("#player2").src = p2Hand[4].image;
+  p1War = p1Hand.splice(0, 4);
+  p2War = p2Hand.splice(0, 4);
+  let p1WarVal = convertToNum(p1Hand[0].value);
+  let p2WarVal = convertToNum(p2Hand[0].value);
+  if (p1WarVal > p2WarVal) {
+    document.querySelector("#result").innerText = "Player 1 Wins";
+    winner = p2Hand.shift();
+    addToP1Hand = p1Hand.push(winner);
+    winningCard = p1Hand.shift();
+    addToP1Hand = p1Hand.push(winningCard);
+    warWinner = p1Hand.concat(p1War, p2War);
+    p1Hand = warWinner;
+    document.querySelector("#count1").innerText = p1Hand.length;
+    document.querySelector("#count2").innerText = p2Hand.length;
+    console.log(p1Hand);
+    console.log(p2Hand);
+    document.querySelector("#draw").classList.toggle("hidden");
+    document.querySelector("#drawWar").classList.toggle("hidden");
+    document.querySelector("#BIG").classList.toggle("hidden");
+  } else if (p1WarVal < p2WarVal) {
+    document.querySelector("#result").innerText = "Player 2 Wins";
+    winner = p1Hand.shift();
+    addToP1Hand = p2Hand.push(winner);
+    winningCard = p2Hand.shift();
+    addToP1Hand = p2Hand.push(winningCard);
+    warWinner = p2Hand.concat(p1War, p2War);
+    p2Hand = warWinner;
+    document.querySelector("#count1").innerText = p1Hand.length;
+    document.querySelector("#count2").innerText = p2Hand.length;
+    console.log(p1Hand);
+    console.log(p2Hand);
+    document.querySelector("#draw").classList.toggle("hidden");
+    document.querySelector("#drawWar").classList.toggle("hidden");
+    document.querySelector("#BIG").classList.toggle("hidden");
+  } else {
+    console.log(p1Hand);
+    console.log(p2Hand);
+    document.querySelector("#result").innerText = "";
+    document.querySelector("#drawWar").classList.toggle("hidden");
+    document.querySelector("#warAgain").classList.toggle("hidden");
+    document.querySelector("#BIG").classList.toggle("hidden");
+  }
 }
 
 // ! Function to change the face cards to Values to compare WIN/LOSE
