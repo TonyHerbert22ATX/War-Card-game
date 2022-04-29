@@ -1,4 +1,4 @@
-<h1 align="center">War Card Game| <a href="https://tonyherbert22atx.github.io/War-Card-game-/">Visit here!</a></h1>
+<h1 align="center">War Card Game| <a href="https://tonyherbert22atx.github.io/War-Card-game/">Visit here!</a></h1>
 
 <div align="center">
 
